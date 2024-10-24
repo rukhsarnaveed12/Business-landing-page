@@ -1,0 +1,473 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px 20px;
+    position: relative;
+}
+
+.navbar-brand {
+    color: orange;
+    font-size: 25px;
+}
+
+.navbar-links {
+    display: flex;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #575757; /* Darker grey on hover */
+}
+
+.navbar-buttons {
+    display: flex;
+}
+
+.btn {
+    background-color: #08f810; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #a08345; /* Darker green on hover */
+}
+
+.btnlogin {
+    background-color: rgb(250, 163, 0); /* Blue */
+}
+
+.login:hover {
+    background-color: #ff0505; /* Darker blue on hover */
+}
+
+/* Responsive Styles */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none; /* Hide links by default */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Adjust based on navbar height */
+        left: 0;
+        background-color: #333;
+    }
+
+    .navbar-links.active {
+        display: flex; /* Show links when active */
+    }
+
+    .navbar-buttons {
+        display: none; /* Hide buttons on mobile */
+    }
+
+    .menu-toggle {
+        display: block; /* Show hamburger icon */
+    }
+}
+.img{
+    margin-top: 100px;
+    margin-left: 700px;
+    height: auto;
+}
+.menu-container{
+    margin-top: -200px;
+    margin-left: 50px;
+}
+.h1{
+    font-size: 24px;
+    font-weight: bolder;
+    color: black;
+}
+
+/* Hide the image on screens 320px or smaller */
+@media (max-width: 321px) {
+    .responsive-img {
+        display: none; /* Hide the image */
+    }
+}
+
+/* Responsive styles for screens 320px or smaller */
+@media (max-width: 321px) {
+
+    .menu-container {
+        margin-top:-40px; /* Adjust top margin */
+        margin-left: 10px;  /* Reduce left margin */
+        padding: 10px;      /* Add padding for spacing */
+        text-align: center; /* Center text for smaller screens */
+    }
+
+    .h1 {
+        font-size: 18px; /* Smaller font size */
+    }
+
+    p {
+        font-size: 14px; /* Smaller paragraph text */
+        line-height: 1.5; /* Improve readability */
+    }
+
+    .btn-warning {
+        width: 80%; /* Make button full width */
+        font-size: 16px; /* Adjust button font size */
+    }
+}
+.h2{
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+}
+.menu{
+    display: flex;
+    gap:30px;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10 black;
+ 
+    flex-wrap: wrap;
+}
+@media (max-width: 321px) {
+    .h2 {
+        margin-left: 10px; /* Reduce left margin */
+        font-size: 18px;   /* Smaller font size */
+        text-align: center; /* Center align text */
+    }
+}
+
+/* For larger desktops (up to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .h2 {
+        margin-left: 100px; /* Larger left margin */
+        font-size: 22px;    /* Adjust font size */
+        text-align: center;   /* Align text to left */
+    }
+}
+
+/* For extra large screens (up to 1280px) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .h2 {
+        margin-left: 200px; /* Adjust left margin */
+        font-size: 25px;    /* Standard font size */
+        text-align: left;   /* Align text to left */
+    }
+}
+
+/* For screens larger than 1280px */
+@media (min-width: 1281px) {
+    .h2 {
+        margin-left: 450px; /* Default margin */
+        font-size: 25px;    /* Default font size */
+        text-align: left;   /* Align text to left */
+    }
+
+
+    @media (max-width: 321px) {
+        .menu {/* Reduce padding */
+            justify-content: center; /* Center the cards */
+            margin: 0;
+            padding: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+        }
+    
+        .card {
+            width: 100%; /* Full width for each card */
+            margin-bottom: 10px; /* Space between cards */
+        }
+    
+        .card-title {
+            font-size: 18px; /* Adjust title font size */
+        }
+    
+        .card-text {
+            font-size: 14px; /* Adjust paragraph font size */
+        }
+    
+        .btn-primary {
+            width: 100%; /* Full width button */
+        }
+    }
+
+/* For tablets and small desktops (up to 768px) */
+@media (min-width: 321px) and (max-width: 768px) {
+    .menu {
+        padding: 30px;
+        justify-content: center; /* Center cards */
+    }
+
+    .card {
+        width: 45%; /* Two cards per row */
+        margin-bottom: 20px; /* Space between cards */
+    }
+}
+
+/* For larger desktops (up to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .menu {
+        padding: 40px;
+        justify-content: space-between; /* Space cards evenly */
+    }
+
+    .card {
+        width: 30%; /* Three cards per row */
+    }
+}
+
+/* For extra large screens (up to 1280px) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .menu {
+        padding: 50px;
+        justify-content: space-between; /* Space cards evenly */
+    }
+
+    .card {
+        width: 22%; /* Four cards per row */
+    }
+}
+
+/* For screens larger than 1280px */
+@media (min-width: 1281px) {
+    .menu {
+        padding: 50px;
+        justify-content: space-between; /* Space cards evenly */
+    }
+
+    .card {
+        width: 18rem; /* Maintain original width */
+    }
+}
+}
+/*respon*/
+.client-testimonials {
+    background-color: #f7f7f7;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .testimonial-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 40%;
+    min-width: 280px; /* Minimum width for smaller screens */
+  }
+  
+  .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .card p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .card h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  /*respom*/
+
+  .meet-the-team {
+    background-color: #f7f7f7;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .team-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    min-width: 250px; /* Minimum width for smaller screens */
+  }
+  
+  .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .card h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  .card p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  /* Base styles for card layout */
+.card {
+    transition: transform 0.2s; /* Add a smooth transform on hover */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 1280px) {
+    .card {
+        width: 40%; /* Adjust width for larger screens */
+    }
+}
+
+@media (max-width: 1024px) {
+    .card {
+        width: 45%; /* Adjust width for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 90%; /* Take full width on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 95%; /* Slightly reduce padding for mobile */
+    }
+
+    .card img {
+        height: 120px; /* Adjust image height for mobile */
+    }
+
+    .card h3 {
+        font-size: 18px; /* Slightly smaller text */
+    }
+
+    .card p {
+        font-size: 14px; /* Adjust paragraph size */
+    }
+}
+
+.newsletter {
+    background-color: #f7f7f7;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  .newsletter h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .newsletter p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .newsletter-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 300px; /* Default width */
+    min-width: 200px; /* Minimum width for smaller screens */
+  }
+  
+  .newsletter-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 320px) {
+    .newsletter-form {
+      flex-direction: column; /* Stack input and button */
+    }
+    .newsletter-form input {
+      width: 100%; /* Full width on very small screens */
+    }
+  }
+  
+  @media (min-width: 321px) and (max-width: 768px) {
+    .newsletter-form input {
+      width: 90%; /* 90% width on small screens */
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .newsletter-form input {
+      width: 70%; /* 70% width on medium screens */
+    }
+  }
+  
+  @media (min-width: 1025px) and (max-width: 1280px) {
+    .newsletter-form input {
+      width: 50%; /* 50% width on larger screens */
+    }
+  }
+  
+  @media (min-width: 1281px) {
+    .newsletter-form input {
+      width: 30%; /* 30% width on extra large screens */
+    }
+  }
+  
